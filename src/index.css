@@ -1,0 +1,158 @@
+
+:root {
+  --bg: #f5f6ff;
+  --surface: #ffffff;
+  --header-bg: #e8e8ff;
+  --text: #222222;
+  --muted: #555555;
+  --accent: #7065d8;
+  --accent-hover: #5c51bf;
+}
+
+html[data-theme='dark'] {
+  --bg: #101018;
+  --surface: #1c1c2b;
+  --header-bg: #252535;
+  --text: #f5f5f5;
+  --muted: #c2c2ce;
+  --accent: #7065d8;
+  --accent-hover: #5c51bf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 40px 20px;
+  transition: background 0.3s ease;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  background: var(--header-bg);
+  color: var(--text);
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.content {
+  background: var(--surface);
+  color: var(--text);
+  padding: 40px 24px;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+
+.footer {
+  background: var(--header-bg);
+  color: var(--text);
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+.header,
+.content,
+.footer,
+button {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+html[data-theme='blue'] {
+  --bg: #071a35;
+  --surface: #112e54;
+  --header-bg: #164675;
+  --text: #f1f7ff;
+  --muted: #b3cee8;
+  --accent: #298de0;
+  --accent-hover: #1974c0;
+}
+
+
+/* Окрема демонстрація Zustand */
+
+.zustand-demo {
+  --z-bg: #f5f6ff;
+  --z-surface: #ffffff;
+  --z-header: #e8e8ff;
+  --z-text: #222222;
+
+  margin-top: 32px;
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--z-bg);
+  color: var(--z-text);
+  transition: background 0.3s;
+}
+
+.zustand-demo[data-z-theme='dark'] {
+  --z-bg: #101018;
+  --z-surface: #1c1c2b;
+  --z-header: #252535;
+  --z-text: #ffffff;
+}
+
+.zustand-demo[data-z-theme='blue'] {
+  --z-bg: #071a35;
+  --z-surface: #112e54;
+  --z-header: #164675;
+  --z-text: #f1f7ff;
+}
+
+.z-header,
+.z-content,
+.z-footer {
+  padding: 24px;
+  border-radius: 14px;
+  color: var(--z-text);
+}
+
+.z-header,
+.z-footer {
+  background: var(--z-header);
+}
+
+.z-content {
+  background: var(--z-surface);
+  margin: 16px 0;
+}
+
+.z-footer {
+  text-align: center;
+}
+
+.z-header select {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+}
